@@ -13,17 +13,16 @@ class Planta(object):
 	def settemporada(self):
 		return(self._temporada)
 class Jardin(Planta):
-	def __init__(self,numplantas = 0, emplazamiento = "", lugar = "", nombre = "", j = None):
+	def __init__(self, emplazamiento = "", lugar = "", nombre = "", j = None):
 		#self.emplazamiento = emplazamiento
 		#self.lugar = lugar
 		#self.numplantas = numplantas
-		emplazamiento = lugar
-		numplantas = 0		
+		emplazamiento = lugar		
 		p = []
-		i = 0
 		for i in p:
 			p[i] = None
-			#p.remove(i)
+
+		numplantas = len(p)
 
 	def Jardin(self, j):
 		emplazamiento = j.emplazamiento
