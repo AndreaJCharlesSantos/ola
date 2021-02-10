@@ -12,8 +12,10 @@ class Planta(object):
 
 	def settemporada(self):
 		return(self._temporada)
+	def __eq__(self, otro):
+		return self.nombre == otro.nombre
 class Jardin(Planta):
-	def __init__(self, emplazamiento = "", lugar = "", nombre = "", j = None):
+	def __init__(self, j = 0, emplazamiento = "", lugar = "", nombre = ""):
 		#self.emplazamiento = emplazamiento
 		#self.lugar = lugar
 		#self.numplantas = numplantas
@@ -49,12 +51,16 @@ class Jardin(Planta):
 		if numplantas == 0:
 			print("No quedan plantas en el jardín")
 		else:
+			tmp = Planta(nombre)
+			p.remove(tmp)
+			'''
 			for i in range(0,100):
 				if nombre == p[i].getnombre() and esp == p[i].getespecie():
 					p[i].remove()
 					p[i] = None
 					numplantas -= 1
 					break
+					'''
 #Inicio pedorro >:C
 Prueba = Jardin()
 Prueba.Jardin(100)
